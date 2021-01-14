@@ -41,7 +41,7 @@ class Hyperparams:
 
     # training scheme
     lr = 0.001 # Initial learning rate.
-    logdir = "logdir/LJ01"
+    logdir = "/content/drive/MyDrive/Widya1.0/logdir/LJ01"
     sampledir = 'samples'
     B = 32 # batch size
     num_iterations = 2000000
