@@ -102,8 +102,8 @@ def get_batch():
         if hp.prepro:
             def _load_spectrograms(fpath):
                 fname = os.path.basename(fpath)
-                mel = "/content/drive/MyDrive/Widya1.0/mels/{}".format(fname.replace("wav", "npy"))
-                mag = "/content/drive/MyDrive/Widya1.0/mags/{}".format(fname.replace("wav", "npy"))
+                mel = "/content/drive/MyDrive/Widya1.0/mels/{}".format(fname.decode("utf-8").replace("wav", "npy"))
+                mag = "/content/drive/MyDrive/Widya1.0/mags/{}".format(fname.decode("utf-8").replace("wav", "npy"))
                 return fname, np.load(mel), np.load(mag)
 
             fname, mel, mag = tf.py_func(_load_spectrograms, [fpath], [tf.string, tf.float32, tf.float32])
